@@ -1,310 +1,573 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Legal-Solution</title>
     <link rel="icon" href="./assets/images/business.png" type="png/icon" />
 
     <!-- Flowbite  -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
+      rel="stylesheet"
+    />
     <!-- Tailwind  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/7959247147.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/7959247147.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <!-- Header Section  -->
-    <header class="container mx-auto">
-        <!-- Nav Bar Section  -->
-        <nav class="bg-white dark:bg-white fixed w-full z-20 top-0 start-0">
-            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="https://github.com/arnabw/Legal-Solution"
-                    class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="./assets/images/logo2.png" class="h-8" alt="justice-logo" />
-                </a>
-                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <button type="button"
-                        class="text-white bg-[#B68C5A] font-medium rounded-lg text-xs lg:text-sm px-2 lg:px-4 py-1 lg:py-2 text-center dark:bg-[#B68C5A]">
-                        Free Consultation
-                    </button>
-                    <button data-collapse-toggle="navbar-sticky" type="button"
-                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        aria-controls="navbar-sticky" aria-expanded="false">
-                        <i class="text-xl lg:text-2xl fa-solid fa-bars"></i>
-                    </button>
-                </div>
-                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+    <header class="container mx-auto text-balance">
+      <!-- Nav Bar Section  -->
+      <nav class="bg-white dark:bg-white fixed w-full z-20 top-0 start-0">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <a
+            href="https://github.com/arnabw/Legal-Solution"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="./assets/images/logo2.png"
+              class="h-8"
+              alt="justice-logo"
+            />
+          </a>
+          <div
+            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+          >
+            <button
+              type="button"
+              class="text-white bg-[#B68C5A] font-medium rounded-lg text-xs lg:text-sm px-2 lg:px-4 py-1 lg:py-2 text-center dark:bg-[#B68C5A]"
+            >
+              Free Consultation
+            </button>
+            <button
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <i class="text-xl lg:text-2xl fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-sticky"
+          >
+            <ul
+              class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 dark:bg-white"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-[#707070] rounded md:p-0"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-[#707070] rounded md:p-0"
+                >
+                  <button
+                    id="dropdownDelayButton"
+                    data-dropdown-toggle="dropdownDelay"
+                    data-dropdown-delay="500"
+                    data-dropdown-trigger="hover"
+                    type="button"
+                  >
+                    Services<i
+                      class="ml-2 text-xs fa-solid fa-chevron-right"
+                    ></i>
+                  </button>
+
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownDelay"
+                    class="z-10 hidden bg-[#B68C5A] divide-y divide-white rounded-lg shadow w-44 dark:bg-[#B68C5A]"
+                  >
                     <ul
-                        class="flex flex-col p-4 md:p-0 mt-4 font-medium rounded-lg bg-white md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 dark:bg-white">
-                        <li>
-                            <a href="#" class="block py-2 px-3 text-[#707070] rounded md:p-0">Home</a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 px-3 text-[#707070] rounded md:p-0">
-                                <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay"
-                                    data-dropdown-delay="500" data-dropdown-trigger="hover" type="button">
-                                    Services<i class="ml-2 text-xs fa-solid fa-chevron-right"></i>
-                                </button>
-
-                                <!-- Dropdown menu -->
-                                <div id="dropdownDelay"
-                                    class="z-10 hidden bg-[#B68C5A] divide-y divide-white rounded-lg shadow w-44 dark:bg-[#B68C5A]">
-                                    <ul class="py-2 text-sm text-white dark:text-white"
-                                        aria-labelledby="dropdownDelayButton">
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Service
-                                                1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Service
-                                                2</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Service
-                                                3</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 px-3 text-[#707070] rounded md:p-0">
-                                <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay2"
-                                    data-dropdown-delay="500" data-dropdown-trigger="hover" type="button">
-                                    Cases<i class="ml-2 text-xs fa-solid fa-chevron-right"></i>
-                                </button>
-
-                                <!-- Dropdown menu -->
-                                <div id="dropdownDelay2"
-                                    class="z-10 hidden bg-[#B68C5A] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#B68C5A]">
-                                    <ul class="py-2 text-sm text-white dark:text-white"
-                                        aria-labelledby="dropdownDelayButton">
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Case
-                                                1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Case
-                                                2</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Case
-                                                3</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Case
-                                                4</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Case
-                                                5</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 px-3 text-[#707070] rounded md:p-0">
-                                <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay3"
-                                    data-dropdown-delay="500" data-dropdown-trigger="hover" type="button">
-                                    Blogs<i class="ml-2 text-xs fa-solid fa-chevron-right"></i>
-                                </button>
-
-                                <!-- Dropdown menu -->
-                                <div id="dropdownDelay3"
-                                    class="z-10 hidden bg-[#B68C5A] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#B68C5A]">
-                                    <ul class="py-2 text-sm text-white dark:text-white"
-                                        aria-labelledby="dropdownDelayButton">
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Blog
-                                                1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Blog
-                                                2</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="block py-2 px-3 text-[#707070] rounded md:p-0">
-                                <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay4"
-                                    data-dropdown-delay="500" data-dropdown-trigger="hover" type="button">
-                                    Contact Us<i class="ml-2 text-xs fa-solid fa-chevron-right"></i>
-                                </button>
-
-                                <!-- Dropdown menu -->
-                                <div id="dropdownDelay4"
-                                    class="z-10 hidden bg-[#B68C5A] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#B68C5A]">
-                                    <ul class="py-2 text-sm text-white dark:text-white"
-                                        aria-labelledby="dropdownDelayButton">
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Address
-                                                1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#"
-                                                class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]">Address
-                                                2</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </a>
-                        </li>
+                      class="py-2 text-sm text-white dark:text-white"
+                      aria-labelledby="dropdownDelayButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Service 1</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Service 2</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Service 3</a
+                        >
+                      </li>
                     </ul>
-                </div>
-            </div>
-        </nav>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-[#707070] rounded md:p-0"
+                >
+                  <button
+                    id="dropdownDelayButton"
+                    data-dropdown-toggle="dropdownDelay2"
+                    data-dropdown-delay="500"
+                    data-dropdown-trigger="hover"
+                    type="button"
+                  >
+                    Cases<i class="ml-2 text-xs fa-solid fa-chevron-right"></i>
+                  </button>
 
-        <!-- Jumbotron Section  -->
-        <section
-            class="bg-center bg-no-repeat bg-[url('./assets/images/banner.png')] bg-white dark:bg-white bg-blend-multiply">
-            <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
-                <h1
-                    class="mb-4 text-4xl font-extrabold tracking-tight leading-none lg:w-[668px] mx-auto text-white md:text-5xl lg:text-6xl">
-                    We Provide Effective Legal Solutions
-                </h1>
-                <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
-                    There are many variations of passages of Lorem Ipsum available, but
-                    the majority have suffered alteration in some form, by injected
-                    humour.
-                </p>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownDelay2"
+                    class="z-10 hidden bg-[#B68C5A] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#B68C5A]"
+                  >
+                    <ul
+                      class="py-2 text-sm text-white dark:text-white"
+                      aria-labelledby="dropdownDelayButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Case 1</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Case 2</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Case 3</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Case 4</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Case 5</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-[#707070] rounded md:p-0"
+                >
+                  <button
+                    id="dropdownDelayButton"
+                    data-dropdown-toggle="dropdownDelay3"
+                    data-dropdown-delay="500"
+                    data-dropdown-trigger="hover"
+                    type="button"
+                  >
+                    Blogs<i class="ml-2 text-xs fa-solid fa-chevron-right"></i>
+                  </button>
 
-                <form class="flex items-center justify-center gap-3 lg:gap-6">
-                    <div class="w-[300px] lg:w-[500px]">
-                        <input type="text"
-                            class="bg-white text-[#A0A0A0] text-sm block w-full p-2 lg:p-4 border-none rounded-lg dark:bg-white dark:text-[#A0A0A0]"
-                            placeholder="Search your services" required />
-                    </div>
-                    <button type="button"
-                        class="text-white bg-[#B68C5A] font-medium rounded-lg text-sm p-2 lg:p-4 text-center w-[100px] lg:w-[150px] dark:bg-[#B68C5A]">
-                        Search
-                    </button>
-                </form>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownDelay3"
+                    class="z-10 hidden bg-[#B68C5A] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#B68C5A]"
+                  >
+                    <ul
+                      class="py-2 text-sm text-white dark:text-white"
+                      aria-labelledby="dropdownDelayButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Blog 1</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Blog 2</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-[#707070] rounded md:p-0"
+                >
+                  <button
+                    id="dropdownDelayButton"
+                    data-dropdown-toggle="dropdownDelay4"
+                    data-dropdown-delay="500"
+                    data-dropdown-trigger="hover"
+                    type="button"
+                  >
+                    Contact Us<i
+                      class="ml-2 text-xs fa-solid fa-chevron-right"
+                    ></i>
+                  </button>
+
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownDelay4"
+                    class="z-10 hidden bg-[#B68C5A] divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-[#B68C5A]"
+                  >
+                    <ul
+                      class="py-2 text-sm text-white dark:text-white"
+                      aria-labelledby="dropdownDelayButton"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Address 1</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="block px-4 py-2 hover:bg-white dark:hover:bg-white dark:hover:text-[#B68C5A]"
+                          >Address 2</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Jumbotron Section  -->
+      <section
+        class="bg-center bg-no-repeat bg-[url('./assets/images/banner.png')] bg-white dark:bg-white bg-blend-multiply"
+      >
+        <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+          <h1
+            class="mb-4 text-4xl font-extrabold tracking-tight leading-none lg:w-[668px] mx-auto text-white md:text-5xl lg:text-6xl"
+          >
+            We Provide Effective Legal Solutions
+          </h1>
+          <p
+            class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48"
+          >
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour.
+          </p>
+
+          <form class="flex items-center justify-center gap-3 lg:gap-6">
+            <div class="w-[300px] lg:w-[500px]">
+              <input
+                type="text"
+                class="bg-white text-[#A0A0A0] text-sm block w-full p-2 lg:p-4 border-none rounded-lg dark:bg-white dark:text-[#A0A0A0]"
+                placeholder="Search your services"
+                required
+              />
             </div>
-        </section>
+            <button
+              type="button"
+              class="text-white bg-[#B68C5A] font-medium rounded-lg text-sm p-2 lg:p-4 text-center w-[100px] lg:w-[150px] dark:bg-[#B68C5A]"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </section>
     </header>
 
     <!-- Main Section  -->
-    <main class="container mx-auto">
-        <!-- Practice Area Section  -->
-        <section class="bg-white flex flex-col justify-center items-center mt-6 md:mt-8 lg:mt-10">
-            <div class="text-center">
-                <h1 class="text-2xl lg:text-4xl font-extrabold text-[#414040]">
-                    The Legal Practice Area
-                </h1>
-                <p class="text-[#707070] w-[400px] lg:w-[714px] mt-4 lg:mt-6">
-                    There are many variations of passages of Lorem Ipsum available, but
-                    the majority have suffered alteration in some form, by injected
-                    humour.
-                </p>
+    <main class="container mx-auto text-balance">
+      <!-- Practice Area Section  -->
+      <section
+        class="bg-white flex flex-col justify-center items-center mt-6 md:mt-8 lg:mt-10"
+      >
+        <div class="text-center">
+          <h1 class="text-2xl lg:text-4xl font-extrabold text-[#414040]">
+            The Legal Practice Area
+          </h1>
+          <p class="text-[#707070] w-[400px] lg:w-[714px] mt-4 lg:mt-6">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour.
+          </p>
+        </div>
+        <div
+          class="mt-5 lg:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-x-5"
+        >
+          <div
+            class="max-w-sm p-6 bg-white text-center flex justify-center flex-col border-b-2 border-[#E7E7E7]"
+          >
+            <img
+              class="max-w-16 mx-auto"
+              src="./assets/images/business.png"
+              alt="business"
+            />
+            <h5
+              class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]"
+            >
+              Business Law
+            </h5>
+            <p
+              class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <a href="#" class="">
+              <i
+                class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"
+              ></i>
+            </a>
+          </div>
+          <div
+            class="max-w-sm p-6 bg-gradient-to-b from-gray-100 via-gray-100 to-transparent text-center flex justify-center flex-col border-2 border-[#E7E7E7]"
+          >
+            <img
+              class="max-w-16 mx-auto"
+              src="./assets/images/criminal.png"
+              alt="business"
+            />
+            <h5
+              class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]"
+            >
+              Criminal Law
+            </h5>
+            <p
+              class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <a href="#" class="">
+              <i
+                class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"
+              ></i>
+            </a>
+          </div>
+          <div
+            class="max-w-sm p-6 bg-white text-center flex justify-center flex-col border-b-2 border-[#E7E7E7]"
+          >
+            <img
+              class="max-w-16 mx-auto"
+              src="./assets/images/child.png"
+              alt="business"
+            />
+            <h5
+              class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]"
+            >
+              Child Support
+            </h5>
+            <p
+              class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <a href="#" class="">
+              <i
+                class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"
+              ></i>
+            </a>
+          </div>
+          <div
+            class="max-w-sm p-6 bg-white text-center flex justify-center flex-col"
+          >
+            <img
+              class="max-w-16 mx-auto"
+              src="./assets/images/education.png"
+              alt="business"
+            />
+            <h5
+              class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]"
+            >
+              Education Law
+            </h5>
+            <p
+              class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <a href="#" class="">
+              <i
+                class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"
+              ></i>
+            </a>
+          </div>
+          <div
+            class="max-w-sm p-6 bg-white text-center flex justify-center flex-col border-x-2 border-[#E7E7E7]"
+          >
+            <img
+              class="max-w-16 mx-auto"
+              src="./assets/images/divorce.png"
+              alt="business"
+            />
+            <h5
+              class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]"
+            >
+              Divorce Law
+            </h5>
+            <p
+              class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <a href="#" class="">
+              <i
+                class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"
+              ></i>
+            </a>
+          </div>
+          <div
+            class="max-w-sm p-6 bg-white text-center flex justify-center flex-col"
+          >
+            <img
+              class="max-w-16 mx-auto"
+              src="./assets/images/tax.png"
+              alt="business"
+            />
+            <h5
+              class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]"
+            >
+              Tax Law
+            </h5>
+            <p
+              class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify"
+            >
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <a href="#" class="">
+              <i
+                class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Client Say Section  -->
+      <section
+        class="bg-white flex flex-col justify-center items-center mt-6 md:mt-8 lg:mt-10"
+      >
+        <div class="text-center">
+          <h1 class="text-2xl lg:text-4xl font-extrabold text-[#414040]">
+            What Our Client Say
+          </h1>
+          <p class="text-[#707070] w-[400px] lg:w-[714px] mt-4 lg:mt-6">
+            Gain insights into our legal expertise through the voices of
+            satisfaction in our "Client Testimonials" – a testament to the trust
+            our clients place in our dedicated legal solutions.
+          </p>
+        </div>
+        <!-- Carousal Section  -->
+        
+
+<div id="indicators-carousel" class="relative w-4/5 mt-5 lg:mt-16" data-carousel="slide">
+    <!-- Carousel wrapper -->
+    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+         <!-- Item 1 -->
+        <div class="hidden duration-1000 ease-in-out" data-carousel-item="active">
+            <img class="object-cover size-full" src="./assets/images/slider-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <div class="text-white absolute top-0 size-full flex flex-col justify-center items-center text-center bg-[#1111119e]">
+                <h3 class="text-xl lg:text-2xl font-extrabold">Emily Rodriguez</h3>
+                <h5 class="text-sm lg:text-base font-normal mt-2">Software Developer</h5>
+                <p class="text-sm lg:text-base font-normal lg:w-[900px] mt-4 lg:mt-8">Engaging with their legal expertise was a game-changer for my tech ventures. <span class="hidden lg:inline">From intellectual property challenges to contract negotiations, their team exhibited unwavering professionalism and thoroughness. Their insights not only protected my innovations but also fostered a strategic approach to future projects. I wholeheartedly recommend their services to anyone in the tech industry.</span></p>
             </div>
-            <div class="mt-5 lg:mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-x-5">
-                <div class="max-w-sm p-6 bg-white text-center flex justify-center flex-col border-b-2 border-[#E7E7E7]">
-                    <img class="max-w-16 mx-auto" src="./assets/images/business.png" alt="business" />
-                    <h5 class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]">
-                        Business Law
-                    </h5>
-                    <p class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify">
-                        There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by
-                        injected humour.
-                    </p>
-                    <a href="#" class="">
-                        <i class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="max-w-sm p-6 bg-gradient-to-b from-gray-100 via-gray-100 to-transparent text-center flex justify-center flex-col border-2 border-[#E7E7E7]">
-                    <img class="max-w-16 mx-auto" src="./assets/images/criminal.png" alt="business" />
-                    <h5 class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]">
-                        Criminal Law
-                    </h5>
-                    <p class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify">
-                        There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by
-                        injected humour.
-                    </p>
-                    <a href="#" class="">
-                        <i class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="max-w-sm p-6 bg-white text-center flex justify-center flex-col border-b-2 border-[#E7E7E7]">
-                    <img class="max-w-16 mx-auto" src="./assets/images/child.png" alt="business" />
-                    <h5 class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]">
-                        Child Support
-                    </h5>
-                    <p class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify">
-                        There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by
-                        injected humour.
-                    </p>
-                    <a href="#" class="">
-                        <i class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="max-w-sm p-6 bg-white text-center flex justify-center flex-col">
-                    <img class="max-w-16 mx-auto" src="./assets/images/education.png" alt="business" />
-                    <h5 class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]">
-                        Education Law
-                    </h5>
-                    <p class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify">
-                        There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by
-                        injected humour.
-                    </p>
-                    <a href="#" class="">
-                        <i class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="max-w-sm p-6 bg-white text-center flex justify-center flex-col border-x-2 border-[#E7E7E7]">
-                    <img class="max-w-16 mx-auto" src="./assets/images/divorce.png" alt="business" />
-                    <h5 class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]">
-                        Divorce Law
-                    </h5>
-                    <p class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify">
-                        There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by
-                        injected humour.
-                    </p>
-                    <a href="#" class="">
-                        <i class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="max-w-sm p-6 bg-white text-center flex justify-center flex-col">
-                    <img class="max-w-16 mx-auto" src="./assets/images/tax.png" alt="business" />
-                    <h5 class="mb-2 mt-2 lg:mt-5 text-2xl font-semibold tracking-tight text-[#414040]">
-                        Tax Law
-                    </h5>
-                    <p class="mb-2 lg:mb-5 font-normal text-[#707070] w-64 text-justify">
-                        There are many variations of passages of Lorem Ipsum available,
-                        but the majority have suffered alteration in some form, by
-                        injected humour.
-                    </p>
-                    <a href="#" class="">
-                        <i class="bg-white text-[#B68C5A] text-3xl fa-solid fa-circle-arrow-right"></i>
-                    </a>
-                </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+            <img class="object-cover size-full" src="./assets/images/slider-2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <div class="text-white absolute top-0 size-full flex flex-col justify-center items-center text-center bg-[#1111119e]">
+                <h3 class="text-xl lg:text-2xl font-extrabold">David Patel
+                </h3>
+                <h5 class="text-sm lg:text-base font-normal mt-2">Real Estate Investor
+                </h5>
+                <p class="text-sm lg:text-base font-normal lg:w-[900px] mt-4 lg:mt-8">Navigating the intricate landscape of real estate transactions can be daunting, but with their legal support, it became a seamless journey. <span class="hidden lg:inline">The team demonstrated exceptional proficiency in real estate law, offering insightful advice that contributed significantly to the success of my property ventures. Their attention to detail, responsiveness, and commitment to client satisfaction truly set them apart.</span></p>
             </div>
-        </section>
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+            <img class="object-cover size-full" src="./assets/images/slider-3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            <div class="text-white absolute top-0 size-full flex flex-col justify-center items-center text-center bg-[#1111119e]">
+                <h3 class="text-xl lg:text-2xl font-extrabold">Robert Walker</h3>
+                <h5 class="text-sm lg:text-base font-normal mt-2">Startup Founder</h5>
+                <p class="text-sm lg:text-base font-normal lg:w-[900px] mt-4 lg:mt-8">Our startup faced a myriad of legal challenges, and partnering with this legal team was a transformation experience. <span class="hidden lg:inline">Their strategic guidance, coupled with a deep understanding of startup dynamics, was instrumental in overcoming hurdles and establishing a strong legal foundation. The team's commitment to clear communication, ethical practices, and unwavering support significantly contributed to our journey's success. I am immensely grateful for their invaluable contributions to our startup's growth and stability.</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+        <button type="button" class="w-5 lg:w-10 h-1 rounded-sm" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button" class="w-5 lg:w-10 h-1 rounded-sm" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button" class="w-5 lg:w-10 h-1 rounded-sm" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10">
+            <i class="text-white lg:text-lg fa-solid fa-chevron-left"></i>
+            <span class="sr-only">Previous</span>
+        </span>
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10">
+            <i class="text-white lg:text-lg fa-solid fa-chevron-right"></i>
+            <span class="sr-only">Next</span>
+        </span>
+    </button>
+</div>
+
+        </div>
+      </section>
     </main>
 
     <!-- Flowbite  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
-</body>
-
+  </body>
 </html>
